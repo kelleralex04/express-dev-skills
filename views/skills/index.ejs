@@ -11,7 +11,9 @@
     <ul>
         <% skills.forEach(function(s) { %>
             <li>
-            <%= s.skill %>
+            <a href="/skills/<%= s.id %>">
+                <%= s.skill %>
+            </a>
                 - 
             <%= s.level %>
             </li>
