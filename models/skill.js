@@ -5,9 +5,12 @@ const skills = [
     {id: 4, skill: 'Python', level: 3}
 ];
 
+idMax = 4
+
 module.exports = {
     getAll,
-    getOne
+    getOne,
+    create
 };
 
 function getAll() {
@@ -19,3 +22,9 @@ function getOne(id) {
     console.log(id)
     return skills.find(skill => skill.id === id);
 };
+
+function create(skill) {
+    idMax += 1
+    skill.id = idMax 
+    skills.push(skill)
+}
