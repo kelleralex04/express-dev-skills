@@ -1,0 +1,9 @@
+<%- include('../partials/header') %>
+    <form action="/skills/<%= skill.id %>?_method=PUT" method="POST">
+        <label for="name">Skill</label>
+        <input type="text" name="name" value="<%= skill.skill %>">
+        <label for="level">Level</label>
+        <input type="text" name="level" value="<%= skill.level %>">
+        <button type="submit">Edit Skill</button>
+    </form>
+<%- include('../partials/footer') %>
